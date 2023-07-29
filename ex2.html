@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+
+
+<script type="text/javascript" language="JavaScript"><!--
+function HideContent(d) {
+if(d.length < 1) { return; }
+document.getElementById(d).style.display = "none";
+}
+function ShowContent(d) {
+if(d.length < 1) { return; }
+document.getElementById(d).style.display = "block";
+}
+function ReverseContentDisplay(d) {
+if(d.length < 1) { return; }
+if(document.getElementById(d).style.display == "none") { document.getElementById(d).style.display = "block"; }
+else { document.getElementById(d).style.display = "none"; }
+}
+//--></script>
+
+
+</head>
+
+<body>
+
+<div 
+   id="uniquename" 
+   style="display:none; 
+      position:absolute; 
+      left:200px; 
+      top:100px; 
+      border-style: solid; 
+      background-color: white; 
+      padding: 5px;">
+Content goes here.
+</div>
+
+
+<a 
+   onmouseover="ShowContent('uniquename'); return true;"
+   onmouseout="HideContent('uniquename'); return true;"
+   href="javascript:ShowContent('uniquename')">
+[show]
+</a>
+
+
+<a 
+   onmouseover="HideContent('uniquename'); return true;"
+   href="javascript:HideContent('uniquename')">
+[hide]
+</a>
+
+
+<a 
+   onmouseover="ReverseContentDisplay('uniquename'); return true;"
+   href="javascript:ReverseContentDisplay('uniquename')">
+[show/hide]
+</a>
+
+<div 
+   id="uniquename" 
+   style="display:none; 
+      position:absolute; 
+      left:200px; 
+      top:100px; 
+      border-style: solid; 
+      background-color: white; 
+      padding: 5px;">
+<a href="javascript:HideContent('uniquename')">
+[click to hide]
+</a>
+<p>
+Content goes here.
+</p>
+</div>
+
+
+
+
+
+
+</body>
+</html>
